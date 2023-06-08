@@ -4,8 +4,6 @@ version: 0.2
 phases:
   build:
     commands:
-      - git log
-      - git status
       - ls -R $CODEBUILD_SRC_DIR
       - git submodule update --init --recursive
       - ls -la  $CODEBUILD_SRC_DIR/submodule2
