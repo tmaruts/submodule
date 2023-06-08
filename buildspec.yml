@@ -16,11 +16,11 @@ phases:
   build:
     commands:
       - echo Building the application...
-      - echo building the application...
-      - git config --global credential.helper
+      - git log
+      - git status
       - ls -R $CODEBUILD_SRC_DIR
       - git submodule update --init --recursive
-      - ls -la  $CODEBUILD_SRC_DIR/submodule2
+      - ls -la  $CODEBUILD_SRC_DIR/test2
 artifacts:
   files:
     - '**/*'
