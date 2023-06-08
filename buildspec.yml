@@ -12,12 +12,12 @@ phases:
     commands:
       - echo prebuild the application...
       - git config --global credential.helper
+      - git submodule update --init --recursive
   build:
     commands:
       - echo Building the application...
       - ls -R $CODEBUILD_SRC_DIR
-      - git submodule update --init --recursive
-      - ls -la  $CODEBUILD_SRC_DIR/submodule2
+      - ls -la  $CODEBUILD_SRC_DIR/test2
 artifacts:
   files:
     - '**/*'
